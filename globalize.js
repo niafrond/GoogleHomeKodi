@@ -1,6 +1,5 @@
-import * as Config from "./kodi-hosts.config";
-
 const Helper = require('./helpers.js');
+const TalkPatterns = require('./talkPatterns.js');
 exports.kodiDo = (request, response) => {
     let Kodi = request.kodi;
     let message = request.query.q;
@@ -8,7 +7,7 @@ exports.kodiDo = (request, response) => {
 
 
 
-    for (let [key, value] of Object.entries(Config.talkPatterns)) {
+    for (let [key, value] of Object.entries(TalkPatterns.mappings)) {
         for(let i= 0; i < value.length; i++)
         {
             let re = new RegExp(value[i]);
