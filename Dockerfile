@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:latest
 ENV GOOGLE_HOME_KODI_CONFIG="/config/kodi-hosts.config.js"
 ENV NODE_ENV=production
 ENV PORT=8099
